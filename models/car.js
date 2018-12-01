@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-let car = new.mongoose.Schema({
+let car = new mongoose.Schema({
     marca: String,
     modelo: String,
     annio: Number
