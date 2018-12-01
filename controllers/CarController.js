@@ -41,6 +41,8 @@ cars.modificar = async function(req,res,next){
 //Borrar un registro de un carro
 cars.borrar = async function(req,res,next){
     let {id} = req.params;
+    await cars.borrar({_id: id});
+    res.status(200).JSON({message: 'Se ha eliminado un carro con éxito'});
 }
 
-module.exports = module('CarController');
+module.exports = CarController;
