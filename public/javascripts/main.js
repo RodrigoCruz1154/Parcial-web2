@@ -19,3 +19,4 @@ document.querySelector('#formRegistrar').addEventListener('submit',function(vent
             console.log(err)
         });
 });
+

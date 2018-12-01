@@ -20,27 +20,32 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="table-primary ">
-          <th>
-            <input type="text" class="form-control" placeholder="Marca del carro" aria-label="Marca" aria-describedby="basic-addon1">
-          </th>
-          <th>
-            <input type="text" class="form-control" placeholder="Modelo del carro" aria-label="Modelo" aria-describedby="basic-addon1">
-          </th>
-          <th>
-            <input type="text" class="form-control" placeholder="Año del carro" aria-label="annio" aria-describedby="basic-addon1">
-          </th>
-          <th>
-            <button type="button" class="btn btn-success">Guardar</button>
-          </th>
+        <tr class="table-primary">
+          <form action="submit" method="post" name="formRegistrar" id="formRegistrar">
+            <th>
+              <input type="text" class="form-control" placeholder="Marca del carro" aria-label="Marca" name="marca"
+                aria-describedby="basic-addon1">
+            </th>
+            <th>
+              <input type="text" class="form-control" placeholder="Modelo del carro" aria-label="Modelo" name="modelo"
+                aria-describedby="basic-addon1">
+            </th>
+            <th>
+              <input type="text" class="form-control" placeholder="Año del carro" aria-label="annio" name="annio"
+                aria-describedby="basic-addon1">
+            </th>
+            <th>
+              <button type="button" class="btn btn-success">Guardar</button>
+            </th>
+          </form>
         </tr>
         <thead class="thead-light">
           <tr>
-            <th scope="col">Opciones</th>
+            <th scope="col">Id</th>
             <th scope="col">Marca</th>
             <th scope="col">Modelo</th>
             <th scope="col">Año</th>
-            <th scope="col">Id</th>
+            <th scope="col">Opciones</th>
           </tr>
         </thead>
       </tbody>
