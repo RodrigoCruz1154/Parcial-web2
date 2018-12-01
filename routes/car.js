@@ -9,5 +9,5 @@ router.put('/:id',CarControllers.modificar);
 
 router.post('/',CarControllers.registrar);
 
-router.delete('/'.CarControllers.delete);
+router.delete('/',CarControllers.borrar);
 module.exports = router;
