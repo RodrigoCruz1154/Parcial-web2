@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
+var CarControllers = require('../controllers/CarController');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/', CarControllers.mostrar);
 
-router.post('/inicio',function(req,res,next){
-  res.send('Lol')
-});
+router.put('/:id',CarControllers.modificar);
 
+router.post('/',CarControllers.registrar);
+
+router.delete('/'.CarControllers.delete);
 module.exports = router;
