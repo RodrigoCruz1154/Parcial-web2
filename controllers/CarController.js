@@ -3,7 +3,7 @@ const cars = {};
 //Muestra todos los carros que hay
 cars.mostrar = async function(req,res,next) {
     let cars = await car.find();
-    return res.status(200).JSON(cars);
+    return res.status(200).json(cars);
 };
 
 //Registra un nuevo carro
@@ -15,9 +15,9 @@ cars.registrar = async function(req,res,next){
 
     try {
         await cars.mostrar();
-        return res.status(200).JSON({message:'Carro registrado con éxito'});
+        return res.status(200).json({message:'Carro registrado con éxito'});
     } catch (err) {
-       return res.status(500).JSON(err);
+       return res.status(500).json(err);
     }
 }
 
@@ -32,9 +32,9 @@ cars.modificar = async function(req,res,next){
     console.log(car);
     try {
         await cars.modificar();
-        res.status(200).JSON({message: 'Registro modificado con éxito'});
+        res.status(200).json({message: 'Registro modificado con éxito'});
     } catch (error) {
-        return res.status(500).JSON(error);
+        return res.status(500).json(error);
     }
 }
 
@@ -42,7 +42,7 @@ cars.modificar = async function(req,res,next){
 cars.borrar = async function(req,res,next){
     let {id} = req.params;
     await cars.borrar({_id: id});
-    res.status(200).JSON({message: 'Se ha eliminado un carro con éxito'});
+    res.status(200).json({message: 'Se ha eliminado un carro con éxito'});
 }
 
 module.exports = cars;
