@@ -45,4 +45,4 @@ cars.borrar = async function(req,res,next){
     res.status(200).JSON({message: 'Se ha eliminado un carro con éxito'});
 }
 
-module.exports = CarController;
+module.exports = cars;

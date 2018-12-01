@@ -4,11 +4,7 @@ var CarController = require('../controllers/CarController');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('');
+  res.render('Lol');
 });
-
-router.post('/', function(req,res,next){
-  res.render('index.ejs');
-})
 
 module.exports = router;
