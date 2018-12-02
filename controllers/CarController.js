@@ -2,19 +2,19 @@ const car = require('../models/car');
 const cars = {};
 //Muestra todos los carros que hay
 cars.mostrar = async function(req,res,next) {
-    let cars = await car.find();
+    let cars = await car.mostrar;
     return res.status(200).json(cars);
 };
 
 //Registra un nuevo carro
 cars.registrar = async function(req,res,next){
-    let car = new car();
-    car.marca = req.body.car;
-    car.modelo = req.body.modelo;
-    car.annio = req.body.annio;
-
+    let carro = new car(
+    car.marca = req.body.car,
+    car.modelo = req.body.modelo,
+    car.annio = req.body.annio,
+    )
     try {
-        await cars.mostrar();
+        await cars.registrar;
         return res.status(200).json({message:'Carro registrado con éxito'});
     } catch (err) {
        return res.status(500).json(err);
@@ -31,7 +31,7 @@ cars.modificar = async function(req,res,next){
     }
     console.log(car);
     try {
-        await cars.modificar();
+        await cars.modificar;
         res.status(200).json({message: 'Registro modificado con éxito'});
     } catch (error) {
         return res.status(500).json(error);
